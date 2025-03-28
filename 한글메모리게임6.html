@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한글 메모리 카드 게임</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; }
-        .grid { display: grid; gap: 10px; justify-content: center; margin-top: 20px; }
+        body { text-align: center; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .grid { display: grid; gap: 10px; justify-content: center; align-items: center; margin-top: 20px; }
         .card { 
             width: 180px; 
             height: 180px; 
@@ -20,6 +20,7 @@
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
         }
         .hidden { background: darkgray; }
+        .footer { margin-top: 20px; font-size: 14px; color: gray; text-align: center; }
     </style>
 </head>
 <body>
@@ -36,7 +37,7 @@
     <p id="message"></p>
     
     <script>
-        const hangulChars = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', 'ㅏ', 'ㅑ', 'ㅓ', 'ㅕ', 'ㅗ', 'ㅛ', 'ㅜ', 'ㅠ', 'ㅡ', 'ㅣ'];
+        const hangulChars = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', 'ㅏ', 'ㅑ', 'ㅓ', 'ㅕ', 'ㅗ', 'ㅛ', 'ㅜ', 'ㅠ', 'ㅡ', 'ㅣ'];
         let boardSize = 3;
         let cards = [];
         let firstCard, secondCard;
@@ -108,5 +109,12 @@
 
         setupGame();
     </script>
+    
+    <div class="footer">
+        <p>하트선생님이 언어치료수업을 위해 만들었어요.</p>
+        <p>@Heartytalk</p>
+        <p>tjdah0420@naver.com</p>
+        <p><a href="https://blog.naver.com/mindcarelog" target="_blank">https://blog.naver.com/mindcarelog</a></p>
+    </div>
 </body>
 </html>
